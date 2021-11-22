@@ -11,6 +11,15 @@ public class BootcampDataApexAssignment {
         //TO DO 1.4: Use the Database.Update method to perform an update and set the allOrNone parameter to false.
         //TO DO 1.5: Store the results of the Database.Update method as a List<Database.SaveResult>
        
+        List <Invitation__c> invitations=[select name from Invitation__c where Id=:weddingId];
+
+        for(Invitation__c inv :invitations )
+        {
+            inv.Status__c=newStatus;
+
+        }
+
+        Database.SaveResult[] srList =Database.update(invitations,false);
 
 
     }
@@ -38,11 +47,18 @@ public class BootcampDataApexAssignment {
             //SELECT Parent Fields - Vendor Account Name
             //WHERE Clause - Filter Vendor Status equal to Selected
         //TO DO 2.5: Replace the below return null and return your query results instead
-        return null;
 
 
 
-       
+        List<Wedding__c> lWedding=[   
+        select  Name, Wedding_City__c,Start_Date__c , 
+                Owner.Name, Wedding_Account__r.AccountSource, Wedding_Account__r.Phone, 
+                (select Fixed_Fee__c,Unit_Type__c,Num_Hours__c,Num_Attendees__c , Vendor_Account__r.Name from Wedding_Vendors__r where Vendor_Status__c='Selected' ),
+               (select Invitee_First_Name__c,Invitee_Last_Name__c,Invitee_Email__c,Phone__c from Invitations__r )
+                from Wedding__c where Status__c=:weddingStatus];
+
+
+        return lWedding;
     }
 
     /* Testing
@@ -70,10 +86,15 @@ public class BootcampDataApexAssignment {
             //ORDER BY Clause - Order by CreatedDate in Descending Order
             //LIMIT - Return only 10 Records
         //TO DO 3.5: Replace the below return null and return your search results instead
-
+        List<List<sObject>> searchList = [FIND :searchTerm IN ALL FIELDS 
+        RETURNING Account(Name,Phone,AccountSource,BillingCity where RecordType.Name='Vendor')
+                ,Wedding__c(Name,Status__c,Start_Date__c, End_Date__c )
+                ,Lead(Name,LeadSource,Email,Phone ORDER BY CreatedDate DESC LIMIT 10) 
+                
+                ];
         
 
-        return null;
+        return searchList;
     }
 
     /* Testing
@@ -98,7 +119,9 @@ public class BootcampDataApexAssignment {
         //TO DO 4.4: Execute the Query using the Query String
         //TO DO 4.5: Replace the below return null and return your query results instead
 
-        return null;
+        String queryS='SELECT';
+        queryS='SELECT '+String.join(fields,',') + ' FROM '+ sObjType +String.join(whereClauses,' AND ' ) ;
+        return Database.query(queryS);
     }
 
     /* Testing
@@ -128,10 +151,27 @@ public class BootcampDataApexAssignment {
             //List<SObjectField> variable
         //TO DO 5.7: Replace the below return null and return your variable instead
         
-        
+        List<SObjectField> result = new List<SObjectField>();
+        Schema.SObjectType sObjType = Wedding__c.getSObjectType();
+        Map <String, SObjectField> resultsField = new Map <String, SObjectField> ();
+        resultsField=sObjType.getDescribe().fields.getMap();
+        for(String objName : resultsField.keySet())
+        {
+            if (resultsField.get(objName).getDescribe().getType().name() =='DATETIME' ) 
+            {
+                result.add(resultsField.get(objName));
+                
+            }
+            if (resultsField.get(objName).getDescribe().isCalculated()) 
+            {
+                result.add(resultsField.get(objName));
+                
+            }
+        }
+        System.debug(result);
 
 
-        return null;
+        return result;
     }
 
     /* Testing
