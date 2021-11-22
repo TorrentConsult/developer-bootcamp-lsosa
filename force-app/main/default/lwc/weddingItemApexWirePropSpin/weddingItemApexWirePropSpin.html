@@ -1,0 +1,32 @@
+<!-- Used in Accessing Data in LWC Live Session -->
+<template>
+    <lightning-card class="wedding-item">
+        <div slot="title">
+            <span class="slds-var-p-horizontal_small">{upperCasedName}</span>
+        </div>
+        <div slot="actions">
+            <lightning-button-icon icon-name="utility:search" icon-class="wedding-button" variant="bare" onclick={handleSelection}></lightning-button-icon>
+        </div>
+        <div class="slds-card__body_inner">
+            <template if:true={spinner}>
+                <lightning-spinner alternative-text="Loading"></lightning-spinner>
+            </template>
+           <lightning-record-view-form record-id={wedding.Id} object-api-name="Wedding__c" onload={handleLoad}>
+                <div class="slds-form_horizontal">
+                    <lightning-output-field field-name="Start_Date__c"></lightning-output-field>
+                    <lightning-output-field field-name="Status__c"></lightning-output-field>
+                    <lightning-output-field field-name="Budget__c"></lightning-output-field>
+                    <lightning-output-field field-name="Total_Cost__c"></lightning-output-field>
+                    <lightning-output-field field-name="Meal_Option__c"></lightning-output-field>
+                </div>        
+            </lightning-record-view-form>
+        </div>
+        <template if:true={wedding.Meal_Option__c}>
+            <div slot="footer">
+                <template for:each={mealChoices} for:item="mealChoice">
+                    <lightning-badge label={mealChoice} key={mealChoice}></lightning-badge>
+                </template>
+            </div>
+        </template>
+    </lightning-card>
+</template>

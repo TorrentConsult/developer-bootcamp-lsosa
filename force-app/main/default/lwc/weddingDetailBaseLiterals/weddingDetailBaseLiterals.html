@@ -1,0 +1,20 @@
+<!-- Used in Getting Started with LWC Live Session -->
+<template>
+    <lightning-card>
+        <div slot="title">
+            <lightning-avatar src={pictureUrl} size="medium"></lightning-avatar>
+            <span class="slds-var-p-horizontal_small">{upperCasedName}</span>
+        </div>
+        <div class="slds-card__body_inner">
+            <p>Wedding Date: {weddingDate}</p>           
+            <p>Status: {status}</p>
+            <p>Budget: <lightning-formatted-number value={budget} format-style="currency" minimum-fraction-digits="2" ></lightning-formatted-number></p>
+            <p>Total Cost: <lightning-formatted-number value={totalCost} format-style="currency" minimum-fraction-digits="2" ></lightning-formatted-number></p>
+        </div>
+        <div slot="footer">
+            <template for:each={mealChoices} for:item="mealChoice">
+                <lightning-badge label={mealChoice} key={mealChoice}></lightning-badge>
+            </template>
+        </div>
+    </lightning-card>
+</template>

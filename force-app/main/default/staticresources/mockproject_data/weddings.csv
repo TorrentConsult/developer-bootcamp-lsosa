@@ -1,0 +1,11 @@
+Sample_Data_Key__c,Wedding_Account__c,OwnerId:User,Name,Wedding_City__c,Name_of_Wedding_Financier__c,Status__c,Start_Date__c,Budget__c,Meal_Option__c,Meal_Choices__c
+1,5,5,Viscovi-Jack Wedding,Beachwood,Upstart,Initial Planning,2021-09-13,45700,TRUE,"Chicken, Steak, Pasta"
+2,10,10,Skentelbury Wedding,Philadelphia,Sofi,Initial Planning,2021-08-20,71500,TRUE,"Pasta, Steak"
+3,15,15,Speller-Bollini Wedding,San Jose,Prosper,Initial Planning,2021-11-10,54300,TRUE,"Fish, Chicken"
+4,20,5,Petric Wedding,New Orleans,Self,Initial Planning,2021-05-17,43200,,
+5,25,10,Baxstair-Rosson Wedding,High Point,Parents,Initial Planning,2021-04-05,95300,TRUE,"Vegetarian, Lamb"
+6,30,15,Cheal Wedding,Miami,Lightstream,Vendor Selection & Invitations,2021-09-19,96700,TRUE,"Fish, Pasta"
+7,35,5,Hotchkin-Alders Wedding,Homestead,Sofi,Vendor Selection & Invitations,2021-05-23,75500,TRUE,"Crab, Chicken"
+8,40,10,Worsam Wedding,Boston,Self,Vendor Selection & Invitations,2021-07-18,36300,,
+9,45,15,Hellyar-Stopps Wedding,Troy,Parents,Vendor Selection & Invitations,2021-09-17,34700,,
+10,50,5,Ferrarese Wedding,Bronx,Grandparents,Vendor Selection & Invitations,2021-06-09,56500,TRUE,"Pasta, Lamb, Chicken"

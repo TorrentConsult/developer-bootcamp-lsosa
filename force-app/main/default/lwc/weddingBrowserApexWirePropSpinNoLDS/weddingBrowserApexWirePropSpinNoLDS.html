@@ -1,0 +1,22 @@
+<!-- Used in Accessing Data in LWC Live Session -->
+<template>
+	<lightning-card title="Weddings" icon-name="utility:notification">
+		<div class="slds-card__body_inner">
+            <lightning-combobox name="status" label="Filter by Status" 
+                                value={status} options={statusOptions} onchange={handleChange}>
+            </lightning-combobox>
+            <div class="slds-var-p-around_small">
+                Selected Wedding: {selectedWedding}
+            </div>
+            <lightning-layout multiple-rows="true" pull-to-boundary="small" class="slds-var-p-horizontal_small">
+                <template if:true={weddings}>
+                    <template for:each={weddings} for:item="wedding">
+                        <lightning-layout-item key={wedding.Id} size="6" class="slds-var-p-around_medium">
+                            <c-wedding-item-apex-wire-prop-spin-no-l-d-s wedding={wedding} onweddingselected={handleWeddingSelected}></c-wedding-item-apex-wire-prop-spin-no-l-d-s>
+                        </lightning-layout-item>
+                    </template>
+                </template>
+            </lightning-layout>
+		</div>
+	</lightning-card>
+</template>

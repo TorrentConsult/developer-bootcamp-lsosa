@@ -1,0 +1,41 @@
+Sample_Data_Key__c,Wedding__c,AccountId,OwnerId:User,Subject,Status,Origin,Reason
+1,1,5,5,RSVP / Meal Inquiry,New,Phone,RSVP / Meal Inquiry
+2,2,10,10,Travel Logistics,Working,Email,Travel Logistics
+3,3,15,15,Vendor / Venue Issue,Pending Input from Requestor,Web,Vendor / Venue Issue
+4,4,20,5,Bridal Party Attire,New,Web,Bridal Party Attire
+5,5,25,10,RSVP / Meal Inquiry,Working,Email,RSVP / Meal Inquiry
+6,6,30,15,Travel Logistics,Pending Input from Requestor,Phone,Travel Logistics
+7,7,35,5,Vendor / Venue Issue,New,Email,Vendor / Venue Issue
+8,8,40,10,Bridal Party Attire,Working,Web,Bridal Party Attire
+9,9,45,15,RSVP / Meal Inquiry,Pending Input from Requestor,Web,RSVP / Meal Inquiry
+10,10,50,5,Travel Logistics,New,Email,Travel Logistics
+11,1,5,5,Vendor / Venue Issue,Working,Phone,Vendor / Venue Issue
+12,2,10,10,Bridal Party Attire,Pending Input from Requestor,Email,Bridal Party Attire
+13,3,15,15,RSVP / Meal Inquiry,New,Web,RSVP / Meal Inquiry
+14,4,20,5,Travel Logistics,Working,Web,Travel Logistics
+15,5,25,10,Vendor / Venue Issue,Pending Input from Requestor,Email,Vendor / Venue Issue
+16,6,30,15,Bridal Party Attire,New,Phone,Bridal Party Attire
+17,7,35,5,RSVP / Meal Inquiry,Working,Email,RSVP / Meal Inquiry
+18,8,40,10,Travel Logistics,Pending Input from Requestor,Web,Travel Logistics
+19,9,45,15,Vendor / Venue Issue,New,Web,Vendor / Venue Issue
+20,10,50,5,Bridal Party Attire,Working,Email,Bridal Party Attire
+21,1,5,5,RSVP / Meal Inquiry,Pending Input from Requestor,Phone,RSVP / Meal Inquiry
+22,2,10,10,Travel Logistics,New,Email,Travel Logistics
+23,3,15,15,Vendor / Venue Issue,Working,Web,Vendor / Venue Issue
+24,4,20,5,Bridal Party Attire,Pending Input from Requestor,Web,Bridal Party Attire
+25,5,25,10,RSVP / Meal Inquiry,New,Email,RSVP / Meal Inquiry
+26,6,30,15,Travel Logistics,Working,Phone,Travel Logistics
+27,7,35,5,Vendor / Venue Issue,Pending Input from Requestor,Email,Vendor / Venue Issue
+28,8,40,10,Bridal Party Attire,New,Web,Bridal Party Attire
+29,9,45,15,RSVP / Meal Inquiry,Working,Web,RSVP / Meal Inquiry
+30,10,50,5,Travel Logistics,Pending Input from Requestor,Email,Travel Logistics
+31,1,5,5,Vendor / Venue Issue,New,Phone,Vendor / Venue Issue
+32,2,10,10,Bridal Party Attire,Working,Email,Bridal Party Attire
+33,3,15,15,RSVP / Meal Inquiry,Pending Input from Requestor,Web,RSVP / Meal Inquiry
+34,4,20,5,Travel Logistics,New,Web,Travel Logistics
+35,5,25,10,Vendor / Venue Issue,Working,Email,Vendor / Venue Issue
+36,6,30,15,Bridal Party Attire,Pending Input from Requestor,Phone,Bridal Party Attire
+37,7,35,5,RSVP / Meal Inquiry,New,Email,RSVP / Meal Inquiry
+38,8,40,10,Travel Logistics,Working,Web,Travel Logistics
+39,9,45,15,Vendor / Venue Issue,Pending Input from Requestor,Web,Vendor / Venue Issue
+40,10,50,5,Bridal Party Attire,New,Email,Bridal Party Attire

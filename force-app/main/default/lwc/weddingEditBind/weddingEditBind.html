@@ -1,0 +1,17 @@
+<!-- Used in Getting Started with LWC Live Session -->
+<template>
+    <lightning-card>
+        <div slot="title">
+            <lightning-avatar src={pictureUrl} size="medium"></lightning-avatar>
+            <span class="slds-var-p-horizontal_small">{upperCasedName}</span>
+        </div>
+        <div class="slds-card__body_inner">
+            <lightning-input name="name" label="Wedding Name" placeholder="Enter Wedding Name" type="text" value={name} onchange={handleNameChange}></lightning-input>
+            <lightning-input name="weddingDate"  label="Wedding Date" type="date" value={weddingDate}></lightning-input>
+            <lightning-combobox name="status" label="Status" placeholder="Select" value={status} options={statusOptions}></lightning-combobox>
+            <lightning-input name="budget" label="Budget" type="number" formatter="currency" value={budget}></lightning-input>
+            <lightning-input name="totalCost" label="Total Cost" type="number" formatter="currency" value={totalCost}></lightning-input>
+            <lightning-dual-listbox name="mealChoices" label="Meal Choices" source-label="Available" selected-label="Selected" size="4" value={mealChoices} options={mealChoiceOptions}></lightning-dual-listbox>
+        </div>
+    </lightning-card>
+ </template>

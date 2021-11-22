@@ -1,0 +1,51 @@
+Sample_Data_Key__c,FirstName,LastName,Company,LeadSource,Status,Street,City,Wedding_City__c,State,PostalCode,Country,MobilePhone,Email,Preferred_Contact_Method__c,Estimated_Wedding_Date__c,Role_in_Wedding__c
+1,Ebeneser,Leverett,Leverett Household,Website,New,6649 N Blue Gum St,New Orleans,New Orleans,LA,70116,United States,(504) 621-8927,E.Leverett@yahoo.com.invalid,Email,2022-03-29,Groom
+2,Benjie,Filip,Filip-Talman Household,The Knot,Nurturing,4 B Blue Ridge Blvd,Brighton,Brighton,MI,48116,United States,(810) 292-9388,B.Filip@gmail.com.invalid,Email,2021-07-16,Father of Bride
+3,Christopher,Clears,Clears Household,Wedding Wire,Working,"8 W Cerritos Ave, #54",Bridgeport,Bridgeport,NJ,08014,United States,(856) 636-8749,C.Clears@hotmail.com.invalid,Mobile Phone,2021-10-07,Father of Groom
+4,Ivory,Dumphrey,Dumphrey-Maddicks Household,Wedding Expos,New,639 Main St,Anchorage,Anchorage,AK,99501,United States,(907) 385-4412,I.Dumphrey@mail.com.invalid,Mobile Phone,2022-03-21,Bride
+5,Leoline,Varren,Varren Household,Customer Referrals,Nurturing,34 Center St,Hamilton,Hamilton,OH,45011,United States,(513) 570-1893,L.Varren@aol.com.invalid,Email,2021-07-09,Mother of Bride
+6,Joycelin,Choules,Choules-Lambersen Household,Employee Referrals,Working,3 Mcauley Dr,Ashland,Ashland,OH,44805,United States,(419) 503-2484,J.Choules@yahoo.com.invalid,Email,2021-10-24,Mother of Groom
+7,Prescott,Glusby,Glusby Household,Inbound Calls,New,7 Eads St,Chicago,Chicago,IL,60632,United States,(773) 573-6914,P.Glusby@gmail.com.invalid,Email,2022-02-22,Groom
+8,Thom,Fer,Fer-Garred Household,Venue Referral,Nurturing,7 W Jackson Blvd,San Jose,San Jose,CA,95111,United States,(408) 752-3500,T.Fer@hotmail.com.invalid,Mobile Phone,2022-04-01,Father of Bride
+9,Britte,Borgnet,Borgnet Household,Vendor Referral,Working,"5 Boston Ave, #88",Sioux Falls,Sioux Falls,SD,57105,United States,(605) 414-2147,B.Borgnet@mail.com.invalid,Mobile Phone,2021-04-19,Mother of Groom
+10,Delaney,McDool,McDool-Abramov Household,Website,New,"228 Runamuck Pl, #2808",Baltimore,Baltimore,MD,21224,United States,(410) 655-8723,D.McDool@aol.com.invalid,Email,2021-11-12,Groom
+11,Bret,Tunstall,Tunstall Household,The Knot,Nurturing,2371 Jerrold Ave,Kulpsville,Kulpsville,PA,19443,United States,(215) 874-1229,B.Tunstall@yahoo.com.invalid,Email,2022-01-21,Father of Bride
+12,Mar,Lawlor,Lawlor-Windebank Household,Wedding Wire,Working,37275 St  Rt 17m M,Middle Island,Middle Island,NY,11953,United States,(631) 335-3414,M.Lawlor@gmail.com.invalid,Email,2021-06-07,Father of Groom
+13,Lanita,Giovani,Giovani Household,Wedding Expos,New,"25 E 75th St, #69",Los Angeles,Los Angeles,CA,90034,United States,(310) 498-5651,L.Giovani@hotmail.com.invalid,Mobile Phone,2021-08-03,Bride
+14,Serge,Cheyney,Cheyney-Guise Household,Customer Referrals,Nurturing,98 Connecticut Ave Nw,Chagrin Falls,Chagrin Falls,OH,44023,United States,(440) 780-8425,S.Cheyney@mail.com.invalid,Mobile Phone,2021-10-11,Father of Bride
+15,Emlynne,Hawkswood,Hawkswood Household,Employee Referrals,Working,56 E Morehead St,Laredo,Laredo,TX,78045,United States,(956) 537-6195,E.Hawkswood@aol.com.invalid,Email,2022-01-06,Mother of Groom
+16,Mallory,Wicher,Wicher-Franek Household,Inbound Calls,New,73 State Road 434 E,Phoenix,Phoenix,AZ,85013,United States,(602) 277-4385,M.Wicher@yahoo.com.invalid,Email,2021-12-24,Bride
+17,Willow,Acum,Acum Household,Venue Referral,Nurturing,69734 E Carrillo St,Mc Minnville,Mc Minnville,TN,37110,United States,(931) 313-9635,W.Acum@gmail.com.invalid,Email,2021-10-23,Mother of Bride
+18,Masha,Lantiffe,Lantiffe-Ferrarin Household,Vendor Referral,Working,322 New Horizon Blvd,Milwaukee,Milwaukee,WI,53207,United States,(414) 661-9598,M.Lantiffe@hotmail.com.invalid,Mobile Phone,2021-08-28,Mother of Groom
+19,Ewan,Sproson,Sproson Household,Website,New,1 State Route 27,Taylor,Taylor,MI,48180,United States,(313) 288-7937,E.Sproson@mail.com.invalid,Mobile Phone,2022-03-30,Groom
+20,Karol,Janks,Janks-Sekulla Household,The Knot,Nurturing,394 Manchester Blvd,Rockford,Rockford,IL,61109,United States,(815) 828-2147,K.Janks@aol.com.invalid,Email,2021-03-18,Mother of Bride
+21,Cosimo,Kerin,Kerin Household,Wedding Wire,Working,6 S 33rd St,Aston,Aston,PA,19014,United States,(610) 545-3615,C.Kerin@yahoo.com.invalid,Email,2022-03-23,Father of Groom
+22,Fergus,Liggons,Liggons-Birchenhead Household,Wedding Expos,New,6 Greenleaf Ave,San Jose,San Jose,CA,95111,United States,(408) 540-1785,F.Liggons@gmail.com.invalid,Email,2022-02-07,Groom
+23,Orsa,Godsell,Godsell Household,Customer Referrals,Nurturing,618 W Yakima Ave,Irving,Irving,TX,75062,United States,(972) 303-9197,O.Godsell@hotmail.com.invalid,Mobile Phone,2021-11-19,Mother of Bride
+24,Reynold,Slocket,Slocket-Stiggles Household,Employee Referrals,Working,74 S Westgate St,Albany,Albany,NY,12204,United States,(518) 966-7987,R.Slocket@mail.com.invalid,Mobile Phone,2021-03-20,Father of Groom
+25,Gardner,Andrewartha,Andrewartha Household,Inbound Calls,New,3273 State St,Middlesex,Middlesex,NJ,08846,United States,(732) 658-3154,G.Andrewartha@aol.com.invalid,Email,2021-07-01,Groom
+26,Fredelia,Kimbell,Kimbell-Battany Household,Venue Referral,Nurturing,1 Central Ave,Stevens Point,Stevens Point,WI,54481,United States,(715) 662-6764,F.Kimbell@yahoo.com.invalid,Email,2021-08-31,Mother of Bride
+27,Forbes,Duggan,Duggan Household,Vendor Referral,Working,"86 Nw 66th St, #8673",Shawnee,Shawnee,KS,66218,United States,(913) 388-2079,F.Duggan@gmail.com.invalid,Email,2021-06-29,Father of Groom
+28,Sigismondo,Marchington,Marchington-Heinritz Household,Website,New,"2 Cedar Ave, #84",Easton,Easton,MD,21601,United States,(410) 669-1642,S.Marchington@hotmail.com.invalid,Mobile Phone,2021-09-20,Groom
+29,Mollee,Brent,Brent Household,The Knot,Nurturing,90991 Thorburn Ave,New York,New York,NY,10011,United States,(212) 582-4976,M.Brent@mail.com.invalid,Mobile Phone,2021-09-16,Mother of Bride
+30,Buckie,Moggach,Moggach-Kynder Household,Wedding Wire,Working,386 9th Ave N,Conroe,Conroe,TX,77301,United States,(936) 336-3951,B.Moggach@aol.com.invalid,Email,2021-04-12,Father of Groom
+31,Greer,Scammell,Scammell Household,Wedding Expos,New,74874 Atlantic Ave,Columbus,Columbus,OH,43215,United States,(614) 801-9788,G.Scammell@yahoo.com.invalid,Email,2021-09-12,Bride
+32,Rollo,Trudgion,Trudgion-Mordon Household,Customer Referrals,Nurturing,366 South Dr,Las Cruces,Las Cruces,NM,88011,United States,(505) 977-3911,R.Trudgion@gmail.com.invalid,Email,2022-04-13,Father of Bride
+33,Boonie,Brewis,Brewis Household,Employee Referrals,Working,45 E Liberty St,Ridgefield Park,Ridgefield Park,NJ,07660,United States,(201) 709-6245,B.Brewis@hotmail.com.invalid,Mobile Phone,2021-05-02,Father of Groom
+34,Chantalle,Allinson,Allinson-Bronger Household,Inbound Calls,New,4 Ralph Ct,Dunellen,Dunellen,NJ,08812,United States,(732) 924-7882,C.Allinson@mail.com.invalid,Mobile Phone,2021-03-30,Bride
+35,Lorette,Northbridge,Northbridge Household,Venue Referral,Nurturing,2742 Distribution Way,New York,New York,NY,10025,United States,(212) 860-1579,L.Northbridge@aol.com.invalid,Email,2021-12-07,Mother of Bride
+36,Wynny,O'Lahy,O'Lahy-Boote Household,Vendor Referral,Working,426 Wolf St,Metairie,Metairie,LA,70002,United States,(504) 979-9175,W.O'Lahy@yahoo.com.invalid,Email,2022-02-17,Mother of Groom
+37,Dante,Bubeer,Bubeer Household,Website,New,128 Bransten Rd,New York,New York,NY,10011,United States,(212) 675-8570,D.Bubeer@gmail.com.invalid,Email,2021-05-16,Groom
+38,Bartholomew,Tabrett,Tabrett-Saddington Household,The Knot,Nurturing,17 Morena Blvd,Camarillo,Camarillo,CA,93012,United States,(805) 832-6163,B.Tabrett@hotmail.com.invalid,Mobile Phone,2021-06-02,Father of Bride
+39,Olympia,Robertet,Robertet Household,Wedding Wire,Working,775 W 17th St,San Antonio,San Antonio,TX,78204,United States,(210) 812-9597,O.Robertet@mail.com.invalid,Mobile Phone,2021-08-29,Mother of Groom
+40,Culver,Lindenboim,Lindenboim-McParland Household,Wedding Expos,New,6980 Dorsett Rd,Abilene,Abilene,KS,67410,United States,(785) 463-7829,C.Lindenboim@aol.com.invalid,Email,2021-07-02,Groom
+41,Melli,Glavis,Glavis Household,Customer Referrals,Nurturing,2881 Lewis Rd,Prineville,Prineville,OR,97754,United States,(541) 548-8197,M.Glavis@yahoo.com.invalid,Email,2021-08-29,Mother of Bride
+42,Consolata,Kidder,Kidder-Stanistreet Household,Employee Referrals,Working,7219 Woodfield Rd,Overland Park,Overland Park,KS,66204,United States,(913) 413-4604,C.Kidder@gmail.com.invalid,Email,2021-06-04,Mother of Groom
+43,Barbette,Hiley,Hiley Household,Inbound Calls,New,1048 Main St,Fairbanks,Fairbanks,AK,99708,United States,(907) 231-4722,B.Hiley@hotmail.com.invalid,Mobile Phone,2021-04-21,Bride
+44,Sissie,Dewett,Dewett-Aldwich Household,Venue Referral,Nurturing,678 3rd Ave,Miami,Miami,FL,33196,United States,(305) 606-7291,S.Dewett@mail.com.invalid,Mobile Phone,2022-02-27,Mother of Bride
+45,Dominica,Ludewig,Ludewig Household,Vendor Referral,Working,20 S Babcock St,Fairbanks,Fairbanks,AK,99712,United States,(907) 741-1044,D.Ludewig@aol.com.invalid,Email,2021-11-12,Mother of Groom
+46,Welch,Alwood,Alwood-Bernolet Household,Website,New,2 Lighthouse Ave,Hopkins,Hopkins,MN,55343,United States,(952) 768-2416,W.Alwood@yahoo.com.invalid,Email,2021-10-21,Groom
+47,Tuck,Nannoni,Nannoni Household,The Knot,Nurturing,38938 Park Blvd,Boston,Boston,MA,02128,United States,(617) 399-5124,T.Nannoni@gmail.com.invalid,Email,2022-02-05,Father of Bride
+48,Mervin,Moffat,Moffat-Bramont Household,Wedding Wire,Working,5 Tomahawk Dr,Los Angeles,Los Angeles,CA,90006,United States,(323) 453-2780,M.Moffat@hotmail.com.invalid,Mobile Phone,2021-08-21,Father of Groom
+49,Josepha,Casella,Casella Household,Wedding Expos,New,762 S Main St,Madison,Madison,WI,53711,United States,(608) 336-7444,J.Casella@mail.com.invalid,Mobile Phone,2021-07-05,Bride
+50,Grethel,Wingate,Wingate-Elijah Household,Customer Referrals,Nurturing,209 Decker Dr,Philadelphia,Philadelphia,PA,19132,United States,(215) 907-9111,G.Wingate@aol.com.invalid,Email,2022-03-30,Mother of Bride

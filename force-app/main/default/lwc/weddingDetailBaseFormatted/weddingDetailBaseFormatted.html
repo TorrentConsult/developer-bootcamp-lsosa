@@ -1,0 +1,11 @@
+<!-- Used in Getting Started with LWC Live Session -->
+<template>
+    <lightning-card title={name}>
+        <p>Wedding Date: <lightning-formatted-date-time value={weddingDate} year="numeric" month="short" day="2-digit" weekday="long"> </lightning-formatted-date-time></p>
+        <p>Status: {status}</p>
+        <p>Budget: <lightning-formatted-number value={budget} format-style="currency" minimum-fraction-digits="2" ></lightning-formatted-number></p>
+        <p>Total Cost: <lightning-formatted-number value={totalCost} format-style="currency" minimum-fraction-digits="2" ></lightning-formatted-number></p>
+        <p><lightning-badge label="Chicken"></lightning-badge></p>
+        <p><img src={pictureUrl} /></p>
+       </lightning-card>
+</template>

@@ -1,0 +1,51 @@
+Sample_Data_Key__c,AccountId,OwnerId:User,Name,LeadSource,Wedding_City__c,StageName,Wedding_Date__c,CloseDate,Maximum_Budget__c,Amount
+23,23,8,Padginton-Canny Wedding,Customer Referrals,Honolulu,Proposal Sent,2021-11-25,2021-10-06,<$10k,1700
+13,13,13,Beggio-Brookes Wedding,Wedding Expos,Waco,Proposal Sent,2021-07-10,2021-05-21,<$10k,5100
+26,26,11,Lanston Wedding,Venue Referral,Lynbrook,New,2021-09-29,2021-08-10,<$10k,8600
+6,6,6,Drioli Wedding,Employee Referrals,Euless,New,2021-11-07,2021-09-18,$10k - $25k,11100
+24,24,9,Tumility Wedding,Employee Referrals,Burnsville,Tie It Up,2021-10-11,2021-08-22,$10k - $25k,11200
+29,29,14,Sobczak-Braime Wedding,The Knot,Worcester,Tie It Up,2021-09-10,2021-07-22,$10k - $25k,12300
+17,17,2,Flaws-Sallarie Wedding,Venue Referral,Indianapolis,Needs Analysis,2021-09-09,2021-07-21,$10k - $25k,15200
+36,36,6,Sperling Wedding,Vendor Referral,Owings Mills,New,2021-04-18,2021-02-27,$10k - $25k,24100
+49,49,4,Abrahamoff-Spraggon Wedding,Wedding Expos,Cocoa,Tie It Up,2021-10-07,2021-08-18,$25k - $50k,28000
+44,44,14,Lefwich Wedding,Venue Referral,Oakland,Tie It Up,2021-09-07,2021-07-19,$25k - $50k,30600
+39,39,9,Toler-Reding Wedding,Wedding Wire,Albany,Tie It Up,2021-03-22,2021-01-31,$25k - $50k,32700
+38,38,8,Coast Wedding,The Knot,Honolulu,Proposal Sent,2021-09-18,2021-07-30,$25k - $50k,34200
+45,45,15,Hellyar-Stopps Wedding,Vendor Referral,Troy,Closed Won,2021-09-17,2020-07-29,$25k - $50k,34700
+22,22,7,Uglow Wedding,Wedding Expos,San Leandro,Needs Analysis,2021-08-17,2021-06-28,$25k - $50k,35600
+40,40,10,Worsam Wedding,Wedding Expos,Boston,Closed Won,2021-07-18,2020-05-29,$25k - $50k,36300
+18,18,3,Lemoir Wedding,Vendor Referral,Rock Springs,Proposal Sent,2021-07-04,2021-05-15,$25k - $50k,38100
+32,32,2,Edwardson Wedding,Customer Referrals,Mesquite,Needs Analysis,2021-09-28,2021-08-09,$25k - $50k,40500
+20,20,5,Petric Wedding,The Knot,New Orleans,Closed Won,2021-05-17,2020-03-28,$25k - $50k,43200
+21,21,6,Foulkes-Golsthorp Wedding,Wedding Wire,Boulder,New,2021-03-23,2021-02-01,$25k - $50k,43500
+5,5,5,Viscovi-Jack Wedding,Customer Referrals,Beachwood,Closed Won,2021-09-13,2020-07-25,$25k - $50k,45700
+37,37,7,Bullocke-Lippett Wedding,Website,Thousand Oaks,Needs Analysis,2021-07-31,2021-06-11,$25k - $50k,46000
+42,42,12,Blacklock Wedding,Employee Referrals,San Mateo,Needs Analysis,2021-06-05,2021-04-16,$25k - $50k,48700
+27,27,12,Cotgrove-Inde Wedding,Vendor Referral,Portland,Needs Analysis,2021-09-28,2021-08-09,$25k - $50k,48800
+15,15,15,Speller-Bollini Wedding,Employee Referrals,San Jose,Closed Won,2021-11-10,2020-09-01,$50k - $75k,54300
+31,31,1,Wardhaw-Broadwood Wedding,Wedding Expos,Erie,New,2021-06-19,2021-04-30,$50k - $75k,56300
+50,50,5,Ferrarese Wedding,Customer Referrals,Bronx,Closed Won,2021-06-09,2020-04-20,$50k - $75k,56500
+47,47,2,Blaza-Vankin Wedding,The Knot,Orange,Needs Analysis,2021-08-11,2021-06-22,$50k - $75k,57500
+9,9,9,Jakubczyk-Rainbird Wedding,Vendor Referral,Akron,Tie It Up,2021-08-29,2021-07-10,$50k - $75k,60700
+4,4,4,Blackey Wedding,Wedding Expos,Hayward,Tie It Up,2021-08-27,2021-07-08,$50k - $75k,64800
+3,3,3,Aldrick-Aphale Wedding,Wedding Wire,Jacksonville,Proposal Sent,2021-07-02,2021-05-13,$50k - $75k,66400
+10,10,10,Skentelbury Wedding,Website,Philadelphia,Closed Won,2021-08-20,2020-10-01,$50k - $75k,71500
+43,43,13,Edgler-Surfleet Wedding,Inbound Calls,Ontario,Proposal Sent,2021-10-18,2021-08-29,$50k - $75k,74200
+33,33,3,Bason-Stalman Wedding,Employee Referrals,Tullahoma,Proposal Sent,2021-08-01,2021-06-12,$75k - $100k,75100
+35,35,5,Hotchkin-Alders Wedding,Venue Referral,Homestead,Closed Won,2021-05-23,2020-04-03,$75k - $100k,75500
+2,2,2,Massard Wedding,The Knot,Staten Island,Needs Analysis,2021-11-22,2021-10-03,$75k - $100k,76800
+28,28,13,Tame Wedding,Website,Beloit,Proposal Sent,2021-07-05,2021-05-16,$75k - $100k,77400
+19,19,4,Degan-Smogur Wedding,Website,Mc Lean,Tie It Up,2021-07-22,2021-06-02,$75k - $100k,79500
+46,46,1,Ethington Wedding,Website,Clarks Summit,New,2021-06-07,2021-04-18,$75k - $100k,80800
+11,11,11,Boorman-Aizkovitch Wedding,The Knot,Burlingame,New,2021-11-15,2021-09-26,$75k - $100k,82400
+14,14,14,Langhorn Wedding,Customer Referrals,Anchorage,Tie It Up,2021-08-05,2021-06-16,$75k - $100k,86300
+7,7,7,Heddan-Kobpa Wedding,Inbound Calls,Gardena,Needs Analysis,2021-04-30,2021-03-11,$75k - $100k,89100
+12,12,12,Hoofe Wedding,Wedding Wire,San Gabriel,Needs Analysis,2021-07-03,2021-05-14,$75k - $100k,89900
+48,48,3,Hayne Wedding,Wedding Wire,Pittstown,Proposal Sent,2021-03-16,2021-01-25,$75k - $100k,90700
+16,16,1,Belin Wedding,Inbound Calls,San Leandro,New,2021-05-14,2021-03-25,$75k - $100k,90800
+1,1,1,Ebbings-Rivallant Wedding,Website,Clovis,New,2021-10-27,2021-09-07,$75k - $100k,91700
+34,34,4,Belderson Wedding,Inbound Calls,Paterson,Tie It Up,2021-03-25,2021-02-03,$75k - $100k,94200
+25,25,10,Baxstair-Rosson Wedding,Inbound Calls,High Point,Closed Won,2021-04-05,2020-02-14,$75k - $100k,95300
+41,41,11,Black-Blackbrough Wedding,Customer Referrals,Hackensack,New,2021-03-25,2021-02-03,$75k - $100k,96000
+30,30,15,Cheal Wedding,Wedding Wire,Miami,Closed Won,2021-09-19,2020-07-31,$75k - $100k,96700
+8,8,8,Toomey Wedding,Venue Referral,Evanston,Proposal Sent,2021-03-20,2021-01-29,$75k - $100k,97600

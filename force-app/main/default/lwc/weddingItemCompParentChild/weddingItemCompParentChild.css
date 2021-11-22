@@ -1,0 +1,5 @@
+.wedding-item {
+    border: var(--lwc-borderWidthThin, 1px) solid var(--lwc-colorBorder, #dddbda);
+    border-radius: .25rem;
+    display: block;
+}

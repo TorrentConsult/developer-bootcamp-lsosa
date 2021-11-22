@@ -1,0 +1,30 @@
+<aura:component controller="OrgSetupDataController" implements="lightning:availableForFlowScreens">
+    
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}"/>
+    
+    <aura:attribute name="channel" type="String" default="/event/Sample_Data_Load__e"/>
+    <aura:attribute name="subscription" type="Map"/>
+    <aura:attribute name="messages" type="String[]" />
+    <aura:attribute name="message" type="String" />
+    <aura:attribute name="showSpinner" type="Boolean" default="false" />
+    
+    <aura:attribute name="requestMethod" type="String" />
+    <aura:attribute name="staticResourceName" type="String" />
+    <aura:attribute name="staticResourceDateTime" type="DateTime" />
+    <aura:attribute name="objectName" type="String" />
+    <aura:attribute name="fileName" type="String" />
+    
+    <aura:if isTrue="{!v.showSpinner}">
+        <lightning:spinner alternativeText="Loading" size="small" />
+	</aura:if>    
+    
+    <p class="slds-p-around_small">
+        <lightning:button variant="brand" label="{!(v.requestMethod == 'generateObject' ? 'Load ' : 'Delete ') + v.objectName + ' Data'}" title="Run" onclick="{!c.runJob}" />
+    </p>
+    <p class="slds-p-around_small">
+        <lightning:textarea value="{!v.message}" label="Job Status" disabled="true" />
+    </p>
+    
+    <lightning:empApi aura:id="empApi"/>
+    
+</aura:component>
