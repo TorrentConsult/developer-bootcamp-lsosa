@@ -3,9 +3,7 @@
 @isTest
 class PaymentTest {
 
-    /*  TODO: Uncomment out all this code 
-        You should not need to change any of the code in this class
-        Run all tests and make sure none of them fail
+
 
     @isTest static void testCheckPayment() {
 
@@ -84,6 +82,6 @@ class PaymentTest {
         }
     }        
 
-    */
+    
 
 }

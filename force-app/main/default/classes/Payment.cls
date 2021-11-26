@@ -1,4 +1,4 @@
-public abstract class Payment implements IPay {
+public abstract class Payment implements IPayment {
 
 
          //Static Variables to hold the various messages we use
@@ -6,7 +6,7 @@ public abstract class Payment implements IPay {
     public static final String INVALID_AMOUNT = 'Amount should be greater than 0';
     public static final String INVALID_ACCOUNT_NUMBER = 'Account number is invalid';
     public static final String MISSING_PAYMENT_INFO = 'Payment details are missing';
-    public static final String MASKED_ACCOUNT_ERROR = 'You cannot retrieve the masked checking account number until you set a value';
+
 
     //Use Static initilization to set our Valid Account Number Length
     protected final Integer validAccountNumberLength{
@@ -16,12 +16,12 @@ public abstract class Payment implements IPay {
     }
 
     //Check for a Valid Account Number Length when the value gets set
-    virtual  String accountNumber {
+    protected  String accountNumber {
         get;
         set {
             accountNumber = value;
             if (accountNumber.length() != validAccountNumberLength) {
-                throw new CheckPaymentException(INVALID_ACCOUNT_NUMBER);
+                throw new CardPaymentException(INVALID_ACCOUNT_NUMBER);
             }            
         }
     }
@@ -32,7 +32,7 @@ public abstract class Payment implements IPay {
         set {
             amount = value;
             if (amount < 0) {
-                throw new CheckPaymentException(INVALID_AMOUNT);
+                throw new CardPaymentException(INVALID_AMOUNT);
             }
         }        
     }
@@ -46,28 +46,19 @@ public abstract class Payment implements IPay {
     }
 
     //Sets our class variables based on local variables
-    public void setPaymentDetails(String accountNumber, Decimal amount) {
-        this.accountNumber = accountNumber;
-        this.amount = amount;
-    }
+    public abstract void setPaymentDetails(String accountNumber, Decimal amount);
 
     //Returns the right 5 digits of our checking account number
-    public String getMaskedAccountNumber() {
-        if (this.accountNumber != null) {
-            return this.accountNumber.right(5);
-        } else {
-            throw new CheckPaymentException(MASKED_ACCOUNT_ERROR);
-        }
-    }
+    public abstract String getMaskedAccountNumber();
 
     //Submits a payment and returns a transaction message
     public String makePayment() {
         if (this.accountNumber != null && this.amount != null) {
             return this.transactionMessage;
         } else {
-            throw new CheckPaymentException(MISSING_PAYMENT_INFO);
+            throw new CardPaymentException(MISSING_PAYMENT_INFO);
         }
     }
 
-    
+    public class CardPaymentException extends Exception {}
 }
