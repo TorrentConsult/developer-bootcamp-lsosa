@@ -8,13 +8,13 @@ public class CheckPayment extends Payment {
     }
 
     //Sets our class variables based on local variables
-    override public void setPaymentDetails(String accountNumber, Decimal amount) {
+    public override  void setPaymentDetails(String accountNumber, Decimal amount) {
         this.accountNumber = accountNumber;
         this.amount = amount;
     }
 
     //Returns the right 5 digits of our checking account number
-    override public String getMaskedAccountNumber() {
+    public override  String getMaskedAccountNumber() {
         if (this.accountNumber != null) {
             return this.accountNumber.right(5);
         } else {
@@ -22,7 +22,6 @@ public class CheckPayment extends Payment {
         }
     }
 
-    //Submits a payment and returns a transaction message
     
 
 }

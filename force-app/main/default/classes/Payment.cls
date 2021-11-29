@@ -9,11 +9,9 @@ public abstract class Payment implements IPayment {
 
 
     //Use Static initilization to set our Valid Account Number Length
-    protected final Integer validAccountNumberLength{
-    get{ return validAccountNumberLength; }
-    set { validAccountNumberLength=value;}
+    protected final Integer validAccountNumberLength;
            
-    }
+    
 
     //Check for a Valid Account Number Length when the value gets set
     protected  String accountNumber {
