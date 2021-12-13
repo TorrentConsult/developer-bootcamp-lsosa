@@ -3,12 +3,12 @@
 @isTest
 class AccountServiceTest2 {
 
-    final static Integer PARENT_RECORD_COUNT = 200;
+    final static Integer PARENT_RECORD_COUNT = 2;
 
     @testSetup
     static void makeData() {
         //Step 1: Use @testSetup to create any dependent data
-        List<Account> vendorParents = TestDataFactory.generateVendorParents(PARENT_RECORD_COUNT);
+        List<Account> Accounts = TestDataFactory.generateCustomerAccounts(NUMBER_RECORDS);
         insert vendorParents;
     }
 

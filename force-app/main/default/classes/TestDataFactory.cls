@@ -1,7 +1,7 @@
 /* ------------ Used in Testing Apex Triggers Live Session ------------ */
 /* ------------ Used in Writing Async Apex Live Session  ------------ */
 
-@isTest
+
 public with sharing class TestDataFactory {
 
     @TestVisible final Static Id VENDOR_RECORDTYPE = Schema.SObjectType.Account.getRecordTypeInfosByDeveloperName().get('Vendor').getRecordTypeId();
@@ -63,7 +63,7 @@ public with sharing class TestDataFactory {
             //Add to contacts list
             weddings.add(
                 new Wedding__c(
-                    Name = 'Wedding ' + i,
+                    Name = 'Wedding Test' + i,
                     Wedding_Account__c = customerAccounts[i].Id,
                     Wedding_City__c = 'Ann Arbor',
                     Name_of_Wedding_Financier__c = 'None',
@@ -120,18 +120,166 @@ public with sharing class TestDataFactory {
             //Add to contacts list
             opportunities.add(
                 new Opportunity(
-                    Name = 'Opportunity ' + i,
+                    Name = 'Opportunity Test' + i,
                     AccountId = customerAccounts[i].Id,
                     LeadSource = 'Website',
                     Maximum_Budget__c = '$10k - $25k',
                     Wedding_City__c = 'Ann Arbor',
                     CloseDate = Date.today() + 30,
                     Wedding_Date__c = Date.today() + 365,
-                    StageName = 'New'
+                    StageName = 'New',
+                    Name_of_Wedding_Financier__c='None'
                 )
             );
         }
         return opportunities;
     }
+
+
+
+
+
+
+    public static List<ContentVersion> generateDocuments(Integer nRecords)
+    {
+   
+        Blob bodyBlob=Blob.valueOf('Unit Test ContentVersion Body to be insert in test class for testing the'); 
+        
+        List<ContentVersion> contentVersion_1 = new List<ContentVersion>();
+        for(Integer a=0;a<nRecords; a++)
+        {
+                contentVersion_1.add(new ContentVersion(
+                Title='SampleTitle'+a, 
+                PathOnClient ='SampleTitle'+a+'.jpg',
+                VersionData = bodyBlob, 
+                origin = 'H'
+                )
+                );
+        }
+
+        return contentVersion_1;
+
+
+    }
+
+    public static List<Task> generateTasktoOportunity(List<Opportunity> oppList, Integer nRecords)
+    {
+   
+        
+        List<Task> taskLists = new List<Task>();
+        Id sOptyId;
+
+        for (Opportunity oOpty : oppList) {
+            sOptyId = oOpty.Id;
+                for (Integer a=0; a<nRecords; a++)
+                {
+                    taskLists.add(new Task(Subject='Won Opportunity Follow up Number '+a, ActivityDate=Date.today()+10, WhatId=sOptyId ));
+                }
+        }
+
+        return taskLists;
+    }
+
+     public static List<Task> generateClosedTasktoOportunity(List<Opportunity> oppList, Integer nRecords)
+    {
+   
+        
+        List<Task> taskLists = new List<Task>();
+        Id sOptyId;
+
+        for (Opportunity oOpty : oppList) {
+            sOptyId = oOpty.Id;
+                for (Integer a=0; a<nRecords; a++)
+                {
+                    taskLists.add(new Task(Subject='Won Opportunity Follow up Number '+a, ActivityDate=Date.today()+10, WhatId=sOptyId , Status ='Completed'));
+                }
+        }
+
+        return taskLists;
+    }
+
+    public static List<Event> generateClosedEventtoOportunity(List<Opportunity> oppList, Integer nRecords)
+    {
+   
+        
+        List<Event> EventLists = new List<Event>();
+        Id sOptyId;
+        DateTime startDateTime = DateTime.newInstance(2021, 12,1, 7, 8, 16);
+        DateTime endDateTime = DateTime.newInstance(2021, 12, 5, 7, 8, 16);
+
+        for (Opportunity oOpty : oppList) {
+            sOptyId = oOpty.Id;
+            for (Integer a=0; a<nRecords; a++)
+            {
+                EventLists.add(new Event(Subject='Won Opportunity Follow up Number '+a,  WhatId=sOptyId, startDateTime=startDateTime, endDateTime=endDateTime ));
+            }
+        }
+
+        return EventLists;
+    }
+
+    public static List<Event> generateEventtoOportunity(List<Opportunity> oppList, Integer nRecords)
+    {
+   
+        
+        List<Event> EventLists = new List<Event>();
+        Id sOptyId;
+        DateTime startDateTime = DateTime.newInstance(2021, 12,6, 7, 8, 16);
+        DateTime endDateTime = DateTime.newInstance(2021, 12, 15, 31, 8, 16);
+
+        for (Opportunity oOpty : oppList) {
+            sOptyId = oOpty.Id;
+            for (Integer a=0; a<nRecords; a++)
+            {
+                EventLists.add(new Event(Subject='Won Opportunity Follow up Number '+a,  WhatId=sOptyId, startDateTime=startDateTime, endDateTime=endDateTime ));
+            }
+        }
+
+        return EventLists;
+    }
+
+
+    
+
+    public static List<ContentDocumentLink> generateOpportunitiesWithDocuments(List<Opportunity> opsList, Set <Id> Documents) {
+
+        List<ContentDocumentLink> linkDocumentOps = new List<ContentDocumentLink>();
+    
+        Integer cont=0;
+        for (Opportunity ops : opsList)
+        {
+
+                ContentDocumentLink contentlink = new ContentDocumentLink();
+                contentlink.LinkedEntityId = ops.id;
+                contentlink.contentdocumentid = Documents.iterator().next() ;
+                contentlink.ShareType = 'V';
+                linkDocumentOps.add(contentlink);
+                cont++;
+
+        }
+        
+        return linkDocumentOps;
+
+    }
+
+    public static List<Wedding__c> generateWeddingsWithOpportunities(List<Opportunity> opportunityList,List<Account> generateCustomerAccounts ){
+       
+        List<Wedding__c> listWedding = generateWeddings(generateCustomerAccounts);
+
+        for (Integer a=0; a< opportunityList.size(); a++)
+        {
+
+            listWedding[a].Opportunity__c=opportunityList[a].Id;
+
+        }
+        
+        return listWedding;
+
+    }
+
+
+
+
+
 
 }

@@ -21,7 +21,7 @@ public with sharing class WeddingTriggerHandler {
             weddingIds.add(a.Id);
         }
 
-        Set<Id> oppId=WeddingService.queryWeddingsOpportunities(weddingIds);
+        Set<Id> oppId=WeddingService.queryWeddingsOpportunities(weddingIds) ;
 
         if(oppId.size()>0)
         {
