@@ -55,7 +55,7 @@ public with sharing class WeddingService {
  
     public static void updateTaskOpportunity(Set<Id> weddingIds,Set<Id> OpportunitiesIds) {
         
-        List<task> idTasks = [SELECT id FROM task where whatid in :OpportunitiesIds];
+        List<task> idTasks = [SELECT id FROM task where whatid in :OpportunitiesIds and isclosed = true];
 
         System.debug(idTasks);
 
@@ -75,7 +75,7 @@ public with sharing class WeddingService {
 
     public static void updateEventOpportunity(Set<Id> weddingIds,Set<Id> OpportunitiesIds ) {
         
-        List<Event> idEvents = [SELECT id FROM Event where whatid in :OpportunitiesIds];
+        List<Event> idEvents = [SELECT id FROM Event where whatid in :OpportunitiesIds and EndDateTime < :system.now() ] ;
 
         System.debug(idEvents);
 
