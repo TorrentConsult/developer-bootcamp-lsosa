@@ -56,6 +56,29 @@ public with sharing class TestDataFactory {
         return customerAccounts;
     }
 
+    public static List<Invitation__c> generateWeddingInvitation(List<Wedding__c> weddingList, Integer recordCount) {
+        
+        List<Invitation__c> invitations = new List<Invitation__c>();
+        for (Wedding__c wedding : weddingList) {
+            for (Integer i = 0; i < recordCount; i++) {
+                invitations.add(new Invitation__c(
+                    Invitee_First_Name__c = 'First Name' + i,
+                    Invitee_Last_Name__c = 'Last Name' + i,
+                    Invitee_Email__c = 'lalesescobar@gmail.com',
+                    Wedding__c = wedding.Id,
+                    Street__c = 'Street Address',
+                    City__c = 'City',
+                    State__c = 'State',
+                    Postal_Code__c = 'Postal Code',
+                    Country__c = 'Country',
+                    Status__c ='Invited - Pending Response',
+                    Meal_Request__c = 'Meat'
+                ));
+            }
+        }
+        return invitations;
+    }
+
     /* Testing Apex Triggers Live Session */
     public static List<Wedding__c> generateWeddings(List<Account> customerAccounts) {
         List<Wedding__c> weddings = new List<Wedding__c>();
@@ -68,7 +91,29 @@ public with sharing class TestDataFactory {
                     Wedding_City__c = 'Ann Arbor',
                     Name_of_Wedding_Financier__c = 'None',
                     Budget__c = 20000,
-                    Start_Date__c = Date.today() + 365
+                    Start_Date__c = Date.today() + 10,
+                    Meal_Choices__c='PopKorn'
+                )
+            );
+        }
+        return weddings;
+    }
+
+    public static List<Wedding__c> generateWeddingsParams(List<Account> customerAccounts,String Status, Date openDate) {
+        List<Wedding__c> weddings = new List<Wedding__c>();
+        for (Integer i=0; i<customerAccounts.size(); i++) {    
+            //Add to contacts list
+            weddings.add(
+                new Wedding__c(
+                    Name = 'Wedding Test' + i,
+                    Wedding_Account__c = customerAccounts[i].Id,
+                    Wedding_City__c = 'Ann Arbor',
+                    Name_of_Wedding_Financier__c = 'None',
+                    Budget__c = 20000,
+                    Start_Date__c = openDate,
+                    Meal_Choices__c='PopKorn',
+                    Status__c=Status,
+                    
                 )
             );
         }
