@@ -99,26 +99,7 @@ public with sharing class TestDataFactory {
         return weddings;
     }
 
-    public static List<Wedding__c> generateWeddingsParams(List<Account> customerAccounts,String Status, Date openDate) {
-        List<Wedding__c> weddings = new List<Wedding__c>();
-        for (Integer i=0; i<customerAccounts.size(); i++) {    
-            //Add to contacts list
-            weddings.add(
-                new Wedding__c(
-                    Name = 'Wedding Test' + i,
-                    Wedding_Account__c = customerAccounts[i].Id,
-                    Wedding_City__c = 'Ann Arbor',
-                    Name_of_Wedding_Financier__c = 'None',
-                    Budget__c = 20000,
-                    Start_Date__c = openDate,
-                    Meal_Choices__c='PopKorn',
-                    Status__c=Status,
-                    
-                )
-            );
-        }
-        return weddings;
-    }
+
 
     /* Testing Apex Triggers Live Session */
     public static List<Contact> generateContacts(List<Account> accounts, Integer min, Integer max) {
@@ -276,7 +257,9 @@ public with sharing class TestDataFactory {
             sOptyId = oOpty.Id;
             for (Integer a=0; a<nRecords; a++)
             {
-                EventLists.add(new Event(Subject='Won Opportunity Follow up Number '+a,  WhatId=sOptyId, startDateTime=startDateTime, endDateTime=endDateTime ));
+                EventLists.add(new Event(Subject='Won Opportunity Follow up Number '+a,  WhatId=sOptyId, startDateTime=startDateTime
+                , endDateTime=endDateTime 
+                ));
             }
         }
 

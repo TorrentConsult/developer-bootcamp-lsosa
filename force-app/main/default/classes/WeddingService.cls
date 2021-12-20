@@ -69,7 +69,12 @@ public with sharing class WeddingService {
                     
                 }
             }
-            update(idTasks);
+           
+            Database.SaveResult[] MySaveResult = Database.update(idTasks, false);
+            for(Database.SaveResult sr:MySaveResult){
+                if(!sr.isSuccess())
+                System.debug(sr.getErrors()[0]+'--'+ sr.getId());
+            }
         }
     }
 
@@ -89,7 +94,15 @@ public with sharing class WeddingService {
                     
                 }
             }
-            update(idEvents);
+
+
+                Database.SaveResult[] MySaveResult = Database.update( idEvents, false);
+                
+                for(Database.SaveResult sr:MySaveResult){
+                    if(!sr.isSuccess())
+                    System.debug(sr.getErrors()[0]+'--'+ sr.getId());
+                }
+            
         }
     }
  

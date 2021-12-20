@@ -20,6 +20,7 @@ public with sharing class TestScheduleSendReminder {
 
 
         @istest
+        
         static void testSendEmail()
         {
             List<Invitation__c> lt = [SELECT Id
