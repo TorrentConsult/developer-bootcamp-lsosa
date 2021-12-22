@@ -10,4 +10,14 @@ export default class WeddingEditLDS extends LightningElement {
     objectApiName = WEDDING_OBJECT;
     fields = [NAME_FIELD, STARTDATE_FIELD, STATUS_FIELD, BUDGET_FIELD, TOTALCOST_FIELD];
 
+   handlesuccess(event) {
+    this.dispatchEvent(
+        new ShowToastEvent({
+            title: 'Success',
+            message: event.detail.fields.Name.value + ' has been saved',
+            variant: 'success',
+        }),
+    );
+
+}
 }

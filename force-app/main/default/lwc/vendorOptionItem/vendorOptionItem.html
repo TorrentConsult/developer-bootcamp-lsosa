@@ -1,0 +1,24 @@
+<!-- Used in Accessing Data in LWC Live Session -->
+<template>
+    <lightning-card class="vendor-item">
+        <div slot="title">
+            <span class="slds-var-p-horizontal_small">{upperCasedName}</span>
+        </div>
+        <div slot="actions">
+            <lightning-button-icon icon-name="utility:search" icon-class="wedding-button" variant="bare" onclick={handleSelection}></lightning-button-icon>
+        </div>
+        <div class="slds-card__body_inner">
+           <lightning-record-view-form record-id={vendor.Id} object-api-name="Account">
+                <div class="slds-form_horizontal">
+                    <lightning-output-field field-name="ShippingCity"></lightning-output-field>
+                    <lightning-output-field field-name="Phone"></lightning-output-field>
+                    <lightning-output-field field-name="Website"></lightning-output-field>
+
+                        <lightning-badge label={vendor.Type} ></lightning-badge>
+
+                </div>        
+            </lightning-record-view-form>
+        </div>
+
+    </lightning-card>
+</template>
