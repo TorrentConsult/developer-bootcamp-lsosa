@@ -12,7 +12,7 @@
                 <template if:true={vendors}>
                     <template for:each={vendors} for:item="vendor">
                         <lightning-layout-item key={vendor.Id} size="6" class="slds-var-p-around_medium">
-                            <c-vendor-Option-Item vendor={vendor} onvendorselected={handleVendorSelected}></c-vendor-Option-Item>
+                            <c-vendor-Option-Item vendor={vendor} onvendorselected={handleClick}></c-vendor-Option-Item>
                         </lightning-layout-item>
                     </template>
                 </template>
