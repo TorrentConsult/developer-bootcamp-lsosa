@@ -4,12 +4,12 @@ import getWeddings from '@salesforce/apex/WeddingBrowserController.getWeddings';
 
 export default class WeddingBrowserApexWire extends LightningElement {
 
-    @track status = '';
-    weddings;
+    @track type = '';
+    vendorOptions;
     selectedWedding = 'None Selected';
 
-    @wire(getWeddings, { weddingStatus: '$status' })
-    weddingData;
+    @wire(getWeddings, { weddingType: '$type' })
+    vendorOptionsData;
 
     handleChange(event) {
         this.weddings = this.weddingData.data.filter(function(wedding) {

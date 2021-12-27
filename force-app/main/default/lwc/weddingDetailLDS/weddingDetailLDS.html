@@ -1,11 +1,19 @@
-<!-- Used in Accessing Data in LWC Live Session -->
 <template>
     <lightning-card>
-        <lightning-record-form
-            record-id="a003t00000mqTOZAA2"
-            object-api-name="Wedding__c"
-            layout-type="Full"
-            mode="readonly">
-        </lightning-record-form>
+        <lightning-record-view-form
+            record-id={recordId}
+            object-api-name={objectApiName}>
+            <div>
+                <lightning-output-field field-name="Name" class="slds-border_bottom"></lightning-output-field>
+                <lightning-output-field field-name="Start_Date__c" class="slds-border_bottom"></lightning-output-field>
+                <lightning-output-field field-name="Status__c" class="slds-border_bottom"></lightning-output-field>
+                <lightning-output-field field-name="Budget__c" class="slds-border_bottom"></lightning-output-field>
+                <lightning-output-field field-name="Total_Cost__c" class="slds-border_bottom"></lightning-output-field>
+                <lightning-output-field field-name="Meal_Option__c" class="slds-border_bottom"></lightning-output-field>
+                <template if:true={mealOption}>
+                    <lightning-output-field field-name="Meal_Choices__c" class="slds-border_bottom"></lightning-output-field>
+                </template>
+            </div>           
+        </lightning-record-view-form>
     </lightning-card>
  </template>

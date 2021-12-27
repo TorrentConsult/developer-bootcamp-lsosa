@@ -1,11 +1,16 @@
-<!-- Used in Getting Started with LWC Live Session -->
 <template>
-    <div>
-        <p>Wedding Name: {name}</p>
-        <p>Wedding Date: {weddingDate}</p>
-        <p>Status: {status}</p>
-        <p>Budget: {budget}</p>
-        <p>Total Cost: {totalCost}</p>
-        <p><img src={pictureUrl}/></p>
-    </div>
+    <lightning-card>
+        <div slot="title">
+             <lightning-avatar src={wedding.pictureUrl} size="medium"></lightning-avatar>
+            <span class="slds-var-p-horizontal_small">{upperCasedName}</span>
+        </div>
+        <div class="slds-card__body_inner">
+             <lightning-input name="name" label="Wedding Name" placeholder="Enter Wedding Name" type="text" value={wedding.name} onchange={handleNameChange}></lightning-input>
+            <lightning-input name="weddingDate"  label="Wedding Date" type="date" value={wedding.weddingDate}></lightning-input>
+            <lightning-combobox name="status" label="Status" placeholder="Select" value={wedding.status} options={statusOptions}></lightning-combobox>
+            <lightning-input name="budget" label="Budget" type="number" formatter="currency" value={wedding.budget}></lightning-input>
+            <lightning-input name="totalCost" label="Total Cost" type="number" formatter="currency" value={wedding.totalCost}></lightning-input>
+            <lightning-dual-listbox name="mealChoices" label="Meal Choices" source-label="Available" selected-label="Selected" size="4" value={wedding.mealChoices} options={mealChoiceOptions}></lightning-dual-listbox>
+        </div>
+    </lightning-card>
  </template>
