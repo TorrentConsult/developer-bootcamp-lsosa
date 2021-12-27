@@ -6,17 +6,30 @@ export default class VendorOptionItem extends LightningElement {
     
     get iconStyle()
     {
-        return(this.vendor.hasOwnProperty('Vendor_Options__r')?'utility:delete':'utility:add')
+        return(this.vendor.hasOwnProperty('Vendor_Options__r')?'utility:delete':'action:approval')
      
     }
 
+    get iconStyleAfter()
+    {
+        return(this.vendor.hasOwnProperty('Vendor_Options__r')?'utility:add':'utility:delete')
+     
+    }
 
-    handleSelection() {
+    detailsOptions = {vendorId:'', recordId:''};
+    
+    handleSelection(event) {
+        this.detailsOptions.vendorId=this.vendor.Id;
+        this.detailsOptions.recordId=this.vendor.hasOwnProperty('Vendor_Options__r')? this.vendor.Vendor_Options__r[0] :null
+      
+
         const selectEvent = new CustomEvent('vendorselected', {
-            detail: this.vendor.Id,
-            isInsert: (this.vendor.hasOwnProperty('Vendor_Options__r'))?false:true
+            detail: this.detailsOptions
+           
         });
         this.dispatchEvent(selectEvent);
+          event.target.iconName=this.iconStyleAfter;
+          
     }
 
     get upperCasedName() {

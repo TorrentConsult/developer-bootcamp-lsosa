@@ -1,17 +1,25 @@
 <!-- Used in Accessing Data in LWC Live Session -->
 <template>
 	<lightning-card title="Vendors" icon-name="utility:notification">
+
+
+           
+        <div class="slds-m-top_small slds-clearfix">
+            <lightning-button variant="destructive-text" label="Show Unselected" title="Show Unselected" onclick={handleChange} value = 'Unselected' class="slds-float_right"></lightning-button>
+            <lightning-button variant="destructive-text" label="Show Selected" title="Show Selected" onclick={handleChange} value = {recordId} class="slds-float_right"></lightning-button>
+            <lightning-button variant="destructive" label="Show All" title="Show All" onclick={handleChange} value = '' class="slds-float_right"></lightning-button>
+           
+        </div>
+
 		<div class="slds-card__body_inner">
-
             <lightning-input type="search" label="Search for " onchange={handleChange} > </lightning-input>
-
             <div class="slds-var-p-around_small">
                 Selected Vendors: {selectedVendor} {recordId}
             </div>
             <lightning-layout multiple-rows="true" pull-to-boundary="small" class="slds-var-p-horizontal_small">
                 <template if:true={vendors}>
                     <template for:each={vendors} for:item="vendor">
-                        <lightning-layout-item key={vendor.Id} size="6" class="slds-var-p-around_medium">
+                        <lightning-layout-item key={vendor.Id} size="6" class="slds-var-p-around_medium slds-box">
                             <c-vendor-Option-Item vendor={vendor} onvendorselected={handleClick}></c-vendor-Option-Item>
                         </lightning-layout-item>
                     </template>
